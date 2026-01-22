@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Word Warp",
+  "version": "1.0.0",
+  "description": "Replaces a configured word on web pages.",
+  "author": "Alshival.Ai",
+  "homepage_url": "https://alshival.ai",
+  "permissions": ["storage"],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

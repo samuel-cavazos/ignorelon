@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ignore Elon Settings</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="panel">
+      <h1>Ignore Elon Settings</h1>
+      <p class="hint">Set the replacements below. Matches are case-sensitive.</p>
+      <div id="rows" class="rows" aria-live="polite"></div>
+      <div class="actions">
+        <button id="add" type="button">Add pair</button>
+        <button id="restore" type="button">Restore defaults</button>
+        <button id="save" type="button" class="primary">Save</button>
+        <span id="status" role="status" class="status"></span>
+      </div>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

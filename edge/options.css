@@ -1,0 +1,142 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f1e7;
+  --panel: #ffffff;
+  --text: #1f1b16;
+  --muted: #6f665a;
+  --border: #d9cdbb;
+  --accent: #c73f28;
+  --accent-dark: #a53321;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  background: radial-gradient(circle at top, #fff6e9, var(--bg));
+  color: var(--text);
+}
+
+.panel {
+  max-width: 720px;
+  margin: 40px auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(45, 35, 25, 0.12);
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 8px;
+}
+
+.hint {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.rows {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fffdf9;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+}
+
+input[type="text"]:focus {
+  outline: 2px solid rgba(199, 63, 40, 0.25);
+  border-color: var(--accent);
+}
+
+button {
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(35, 28, 22, 0.12);
+}
+
+button.primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+button.primary:hover {
+  background: var(--accent-dark);
+}
+
+button.remove {
+  background: #fff4f1;
+  border-color: #efb5aa;
+  color: #8f2b1b;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.status {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .panel {
+    margin: 20px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+  }
+}
